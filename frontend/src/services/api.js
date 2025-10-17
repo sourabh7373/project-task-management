@@ -1,0 +1,12 @@
+import axios from 'axios';
+const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+export const getProjects = async () => (await axios.get(`${API_URL}/projects`)).data;
+export const createProject = async (data) => (await axios.post(`${API_URL}/projects`, data)).data;
+export const updateProject = async (id,data) => (await axios.put(`${API_URL}/projects/${id}`, data)).data;
+export const deleteProject = async (id) => (await axios.delete(`${API_URL}/projects/${id}`)).data;
+export const getTasks = async (projectId) => (await axios.get(`${API_URL}/tasks/${projectId}`)).data;
+export const createTask = async (projectId, data) => (await axios.post(`${API_URL}/tasks/${projectId}`, data)).data;
+export const updateTask = async (id,data) => (await axios.put(`${API_URL}/tasks/${id}`, data)).data;
+export const deleteTask = async (id) => (await axios.delete(`${API_URL}/tasks/${id}`)).data;
+export const summarizeTasks = async (tasks) => (await axios.post(`${API_URL}/ai/summarize`, { tasks })).data;
+export const queryTasks = async (question, tasks) => (await axios.post(`${API_URL}/ai/query`, { question, tasks })).data;

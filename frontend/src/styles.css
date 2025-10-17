@@ -1,0 +1,10 @@
+body{font-family:Arial,Helvetica,sans-serif;margin:0;padding:0;background:#f4f6f8}
+.app{max-width:1100px;margin:24px auto;padding:16px;background:#fff;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,0.06)}
+.header{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.projects{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.project-card{padding:8px 12px;background:#eef2ff;border-radius:6px;cursor:pointer}
+.board{display:flex;gap:12px}
+.column{background:#f7f8fb;padding:12px;border-radius:8px;flex:1;min-height:200px}
+.task-card{background:#fff;padding:8px;border-radius:6px;margin-bottom:8px;box-shadow:0 2px 6px rgba(0,0,0,0.06)}
+.controls{display:flex;gap:8px;align-items:center}
+.form-row{display:flex;gap:8px;margin-bottom:8px}
